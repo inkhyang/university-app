@@ -1,17 +1,18 @@
-package journal;
+package service;
 
 
+import journal.Mark;
 import student.Student;
 
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Journal {
+public class JournalService {
 //list of students,
     private Map<Student, Map<Date, Mark>> journal;
 
-    public Journal() {
+    public JournalService() {
         journal =  new HashMap<>();
     }
 
@@ -35,10 +36,5 @@ public class Journal {
             str.append("\n" + student.getName());
         }
         return str.toString();
-    }
-    public String toStringByStudent(Student student) {
-        return "Journal{" +
-                "journal=" + journal.get(student).keySet() +
-                '}';
     }
 }
