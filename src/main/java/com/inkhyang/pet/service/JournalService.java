@@ -1,8 +1,8 @@
 package com.inkhyang.pet.service;
 
 
-import com.inkhyang.pet.journal.Marks;
-import com.inkhyang.pet.student.Student;
+import com.inkhyang.pet.domain.journal.Marks;
+import com.inkhyang.pet.domain.student.Student;
 
 import java.util.Date;
 import java.util.HashMap;

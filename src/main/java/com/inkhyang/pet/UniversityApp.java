@@ -1,9 +1,8 @@
 package com.inkhyang.pet;
 
-import com.inkhyang.pet.classroom.Facult;
-import com.inkhyang.pet.classroom.Group;
-import com.inkhyang.pet.service.JournalService;
-import com.inkhyang.pet.student.Student;
+import com.inkhyang.pet.domain.classroom.Facult;
+import com.inkhyang.pet.domain.classroom.Group;
+import com.inkhyang.pet.domain.student.Student;
 
 public class UniversityApp {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.inkhyang.pet.journal;
+package com.inkhyang.pet.domain.journal;
 
 public enum Marks {
     A(5), B(4), C(3), D(2), F(1);

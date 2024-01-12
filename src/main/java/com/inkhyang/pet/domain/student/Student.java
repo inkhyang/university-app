@@ -1,6 +1,6 @@
-package com.inkhyang.pet.student;
+package com.inkhyang.pet.domain.student;
 
-import com.inkhyang.pet.journal.Mark;
+import com.inkhyang.pet.domain.journal.Mark;
 
 import java.util.ArrayList;
 import java.util.List;

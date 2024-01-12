@@ -1,4 +1,4 @@
-package com.inkhyang.pet.classroom;
+package com.inkhyang.pet.domain.classroom;
 
 import java.util.ArrayList;
 import java.util.List;

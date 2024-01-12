@@ -1,7 +1,6 @@
-package com.inkhyang.pet.journal;
+package com.inkhyang.pet.domain.journal;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Mark {
     private LocalDate date;
