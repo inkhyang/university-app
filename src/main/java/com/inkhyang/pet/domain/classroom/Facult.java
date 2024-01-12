@@ -1,20 +1,26 @@
 package com.inkhyang.pet.domain.classroom;
 
+
+import java.util.UUID;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Facult {
     private String name;
-    private List<Group> groups;
+    private List<Student> groups;
 
-    public Facult(String name, List<Group> groups) {
+    private UUID id;
+
+    public Facult(String name, List<Student> groups) {
         this.name = name;
         this.groups = groups;
+        this.id = UUID.randomUUID();
     }
 
     public Facult(String name) {
         this.name = name;
         this.groups = new ArrayList<>();
+        this.id = UUID.randomUUID();
     }
 
     public String getName() {
@@ -25,15 +31,19 @@ public class Facult {
         this.name = name;
     }
 
-    public List<Group> getGroups() {
+    public List<Student> getGroups() {
         return groups;
     }
-    //add group, remove group
-    public void addGroup(Group group){
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void addGroup(Student group){
         this.groups.add(group);
     }
 
-    public void removeGroup(Group group){
+    public void removeGroup(Student group){
         this.groups.remove(group);
     }
 }
