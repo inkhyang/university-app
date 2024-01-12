@@ -1,22 +1,24 @@
 package com.inkhyang.pet.domain.classroom;
 
+import com.inkhyang.pet.domain.student.Student;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class Student {
+public class Group {
     private String name;
-    private List<com.inkhyang.pet.domain.student.Student> students;
+    private List<Student> students;
 
     private UUID id;
 
-    public Student(String name, List<com.inkhyang.pet.domain.student.Student> students) {
+    public Group(String name, List<com.inkhyang.pet.domain.student.Student> students) {
         this.name = name;
         this.students = students;
         this.id = UUID.randomUUID();
     }
 
-    public Student(String name) {
+    public Group(String name) {
         this.name = name;
         this.students = new ArrayList<>();
         this.id = UUID.randomUUID();

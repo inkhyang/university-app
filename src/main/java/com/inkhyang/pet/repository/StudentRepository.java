@@ -1,16 +1,18 @@
 package com.inkhyang.pet.repository;
 
-import com.inkhyang.pet.domain.classroom.Student;
+import com.inkhyang.pet.domain.student.Student;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 public class StudentRepository {
     private final Map<UUID, Student> students = new HashMap<>();
 
-    private Student findByID(UUID id) {
+    private Student findById(UUID id) {
         return students.get(id);
+    }
+
+    private List<Student> findAll() {
+        return new ArrayList<>(students.values());
     }
 
     private Student save(Student student) {

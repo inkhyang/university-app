@@ -1,23 +1,25 @@
 package com.inkhyang.pet.repository;
 
-import com.inkhyang.pet.domain.classroom.Student;
+import com.inkhyang.pet.domain.classroom.Group;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 public class GroupRepository {
-    private final Map<UUID, Student> groups = new HashMap<>();
+    private final Map<UUID, Group> groups = new HashMap<>();
 
-    private Student findByID(UUID id) {
+    private Group findById(UUID id) {
         return groups.get(id);
     }
 
-    private Student save(Student group) {
+    private List<Group> findAll(){
+        return new ArrayList<>(groups.values());
+    }
+
+    private Group save(Group group) {
         return groups.put(group.getId(), group);
     }
 
-    private void remove(Student group) {
+    private void remove(Group group) {
         groups.remove(group.getId());
     }
 }

@@ -7,11 +7,11 @@ import java.util.List;
 
 public class Facult {
     private String name;
-    private List<Student> groups;
+    private List<Group> groups;
 
     private UUID id;
 
-    public Facult(String name, List<Student> groups) {
+    public Facult(String name, List<Group> groups) {
         this.name = name;
         this.groups = groups;
         this.id = UUID.randomUUID();
@@ -31,7 +31,7 @@ public class Facult {
         this.name = name;
     }
 
-    public List<Student> getGroups() {
+    public List<Group> getGroups() {
         return groups;
     }
 
@@ -39,11 +39,11 @@ public class Facult {
         return id;
     }
 
-    public void addGroup(Student group){
+    public void addGroup(Group group){
         this.groups.add(group);
     }
 
-    public void removeGroup(Student group){
+    public void removeGroup(Group group){
         this.groups.remove(group);
     }
 }
