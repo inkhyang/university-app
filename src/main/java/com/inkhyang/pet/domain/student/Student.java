@@ -10,7 +10,6 @@ public class Student {
     private String firstName;
     private String lastName;
     private List<Mark> marks;
-
     private UUID id;
 
     public Student(String firstName, String lastName, List<Mark> marks) {

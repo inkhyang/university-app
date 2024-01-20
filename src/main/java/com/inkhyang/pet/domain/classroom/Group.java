@@ -12,7 +12,7 @@ public class Group {
 
     private UUID id;
 
-    public Group(String name, List<com.inkhyang.pet.domain.student.Student> students) {
+    public Group(String name, List<Student> students) {
         this.name = name;
         this.students = students;
         this.id = UUID.randomUUID();
@@ -32,7 +32,7 @@ public class Group {
         this.name = name;
     }
 
-    public List<com.inkhyang.pet.domain.student.Student> getStudents() {
+    public List<Student> getStudents() {
         return students;
     }
 
@@ -40,10 +40,10 @@ public class Group {
         return id;
     }
 
-    public void addStudent(com.inkhyang.pet.domain.student.Student student){
+    public void addStudent(Student student){
         students.add(student);
     }
-     public void removeStudent(com.inkhyang.pet.domain.student.Student student){
+     public void removeStudent(Student student){
         students.remove(student);
      }
 }
