@@ -11,6 +11,7 @@ public interface StudentEntityMapper {
     Student toDomain(StudentEntity studentEntity);
 
     @Mapping(target = "id", ignore = true)
+    @Mapping(target = "group", ignore = true)
     StudentEntity toEntity(Student student);
 
     @Named("toId")

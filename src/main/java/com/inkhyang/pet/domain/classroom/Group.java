@@ -21,12 +21,6 @@ public class Group {
         this.students = students;
     }
 
-    public Group(String name) {
-        this.id = new GroupId(name);
-        this.name = name;
-        this.students = new ArrayList<>();
-    }
-
     public GroupId getId() {
         return id;
     }

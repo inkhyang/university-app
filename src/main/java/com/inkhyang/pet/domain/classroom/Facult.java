@@ -1,7 +1,6 @@
 package com.inkhyang.pet.domain.classroom;
 
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Facult {
@@ -18,10 +17,12 @@ public class Facult {
         this.groups = groups;
     }
 
-    public Facult(String name) {
-        this.id = new FacultId(name);
-        this.name = name;
-        this.groups = new ArrayList<>();
+    public FacultId getId() {
+        return id;
+    }
+
+    public void setId(FacultId id) {
+        this.id = id;
     }
 
     public String getName() {

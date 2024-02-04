@@ -17,7 +17,7 @@ public class MarkEntity extends AbstractEntity {
     private String discipline;
 
     @Column(nullable = false)
-    private String score;
+    private Integer score;
 
     @ManyToOne(fetch = FetchType.LAZY)
     private StudentEntity student;
@@ -38,11 +38,11 @@ public class MarkEntity extends AbstractEntity {
         this.discipline = discipline;
     }
 
-    public String getScore() {
+    public Integer getScore() {
         return score;
     }
 
-    public void setScore(String score) {
+    public void setScore(Integer score) {
         this.score = score;
     }
 

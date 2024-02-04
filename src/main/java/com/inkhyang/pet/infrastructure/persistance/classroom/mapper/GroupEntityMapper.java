@@ -2,20 +2,26 @@ package com.inkhyang.pet.infrastructure.persistance.classroom.mapper;
 
 import com.inkhyang.pet.domain.classroom.Group;
 import com.inkhyang.pet.infrastructure.persistance.classroom.entity.GroupEntity;
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.Named;
+import com.inkhyang.pet.infrastructure.persistance.student.entity.StudentEntity;
+import com.inkhyang.pet.infrastructure.persistance.student.mapper.StudentEntityMapper;
+import org.mapstruct.*;
 
-@Mapper
+@Mapper(uses = {StudentEntityMapper.class})
 public interface GroupEntityMapper {
     @Mapping(target = "id", source = ".", qualifiedByName = "toId")
     Group toDomain(GroupEntity groupEntity);
 
     @Mapping(target = "id", ignore = true)
+    @Mapping(target = "facult", ignore = true)
     GroupEntity toEntity(Group group);
 
     @Named("toId")
     default Group.GroupId toId(GroupEntity groupEntity){
         return new Group.GroupId(groupEntity.getName());
+    }
+
+    @AfterMapping
+    default void setGroupToStudents(@MappingTarget GroupEntity groupEntity){
+        groupEntity.getStudents().forEach(studentEntity -> studentEntity.setGroup(groupEntity));
     }
 }

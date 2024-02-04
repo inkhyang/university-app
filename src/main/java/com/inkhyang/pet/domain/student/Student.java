@@ -24,14 +24,6 @@ public class Student {
         this.marks = marks;
     }
 
-    public Student(String email, String firstName, String lastName) {
-        this.id = new StudentId(email);
-        this.email = email;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.marks = new ArrayList<>();
-    }
-
     public StudentId getId() {
         return id;
     }
