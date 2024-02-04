@@ -1,17 +1,22 @@
-package com.inkhyang.pet.domain.journal;
+package com.inkhyang.pet.domain.student;
 
 import java.time.LocalDate;
 
 public class Mark {
-    private LocalDate date;
-    private Discipline discipline;
-    private Marks marks;
 
-    public Mark(Discipline discipline, Marks marks) {
+
+    private LocalDate date;
+
+    private Discipline discipline;
+
+    private Score score;
+
+    public Mark(Discipline discipline, Score score) {
         this.date = LocalDate.now();
         this.discipline = discipline;
-        this.marks = marks;
+        this.score = score;
     }
+
 
     public LocalDate getDate() {
         return date;
@@ -21,7 +26,7 @@ public class Mark {
         return discipline;
     }
 
-    public Marks getMark() {
-        return marks;
+    public Score getScore() {
+        return score;
     }
 }

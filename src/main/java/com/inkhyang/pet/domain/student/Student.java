@@ -1,29 +1,47 @@
 package com.inkhyang.pet.domain.student;
 
-import com.inkhyang.pet.domain.journal.Mark;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 public class Student {
+    private StudentId id;
+    private String email;
     private String firstName;
-    private String lastName;
-    private List<Mark> marks;
-    private UUID id;
 
-    public Student(String firstName, String lastName, List<Mark> marks) {
+    private String lastName;
+
+    private List<Mark> marks;
+
+    public record StudentId(String email) {
+
+    }
+
+    public Student(String email, String firstName, String lastName, List<Mark> marks) {
+        this.id = new StudentId(email);
+        this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
         this.marks = marks;
-        this.id = UUID.randomUUID();
     }
 
-    public Student(String firstName, String lastName) {
+    public Student(String email, String firstName, String lastName) {
+        this.id = new StudentId(email);
+        this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
         this.marks = new ArrayList<>();
-        this.id = UUID.randomUUID();
+    }
+
+    public StudentId getId() {
+        return id;
+    }
+
+    public void setId(StudentId id) {
+        this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
     }
 
     public String getFirstName() {
@@ -34,15 +52,11 @@ public class Student {
         return lastName;
     }
 
-    public UUID getId() {
-        return id;
-    }
-
     public List<Mark> getMarks() {
         return marks;
     }
 
-    public void addMark(Mark mark){
+    public void addMark(Mark mark) {
         marks.add(mark);
     }
 }

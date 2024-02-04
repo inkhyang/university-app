@@ -4,24 +4,35 @@ import com.inkhyang.pet.domain.student.Student;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
+
 
 public class Group {
+
+    private GroupId id;
     private String name;
     private List<Student> students;
 
-    private UUID id;
+    public record GroupId(String name){
 
+    }
     public Group(String name, List<Student> students) {
+        this.id = new GroupId(name);
         this.name = name;
         this.students = students;
-        this.id = UUID.randomUUID();
     }
 
     public Group(String name) {
+        this.id = new GroupId(name);
         this.name = name;
         this.students = new ArrayList<>();
-        this.id = UUID.randomUUID();
+    }
+
+    public GroupId getId() {
+        return id;
+    }
+
+    public void setId(GroupId id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -36,14 +47,12 @@ public class Group {
         return students;
     }
 
-    public UUID getId() {
-        return id;
-    }
 
-    public void addStudent(Student student){
+    public void addStudent(Student student) {
         students.add(student);
     }
-     public void removeStudent(Student student){
+
+    public void removeStudent(Student student) {
         students.remove(student);
-     }
+    }
 }
