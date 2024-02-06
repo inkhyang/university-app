@@ -1,7 +1,7 @@
-package com.inkhyang.pet.infrastructure.persistance.student.mapper;
+package com.inkhyang.pet.infrastructure.persistence.student.mapper;
 
 import com.inkhyang.pet.domain.student.Mark;
-import com.inkhyang.pet.infrastructure.persistance.student.entity.MarkEntity;
+import com.inkhyang.pet.infrastructure.persistence.student.entity.MarkEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

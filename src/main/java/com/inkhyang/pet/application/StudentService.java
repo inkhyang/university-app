@@ -5,10 +5,10 @@ import com.inkhyang.pet.domain.student.Discipline;
 import com.inkhyang.pet.domain.student.Mark;
 import com.inkhyang.pet.domain.student.Score;
 import com.inkhyang.pet.domain.student.Student;
-import com.inkhyang.pet.infrastructure.persistance.StudentEntityRepository;
-import com.inkhyang.pet.infrastructure.persistance.student.entity.StudentEntity;
-import com.inkhyang.pet.infrastructure.persistance.student.mapper.MarkEntityMapper;
-import com.inkhyang.pet.infrastructure.persistance.student.mapper.StudentEntityMapper;
+import com.inkhyang.pet.infrastructure.persistence.StudentEntityRepository;
+import com.inkhyang.pet.infrastructure.persistence.student.entity.StudentEntity;
+import com.inkhyang.pet.infrastructure.persistence.student.mapper.MarkEntityMapper;
+import com.inkhyang.pet.infrastructure.persistence.student.mapper.StudentEntityMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,8 +1,7 @@
-package com.inkhyang.pet.infrastructure.persistance.classroom.mapper;
+package com.inkhyang.pet.infrastructure.persistence.classroom.mapper;
 
 import com.inkhyang.pet.domain.classroom.Facult;
-import com.inkhyang.pet.infrastructure.persistance.classroom.entity.FacultEntity;
-import com.inkhyang.pet.infrastructure.persistance.student.entity.StudentEntity;
+import com.inkhyang.pet.infrastructure.persistence.classroom.entity.FacultEntity;
 import org.mapstruct.*;
 
 @Mapper(uses = {GroupEntityMapper.class})

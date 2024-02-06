@@ -1,9 +1,9 @@
 package com.inkhyang.pet.application;
 
 import com.inkhyang.pet.domain.classroom.Facult;
-import com.inkhyang.pet.infrastructure.persistance.FacultEntityRepository;
-import com.inkhyang.pet.infrastructure.persistance.classroom.entity.FacultEntity;
-import com.inkhyang.pet.infrastructure.persistance.classroom.mapper.FacultEntityMapper;
+import com.inkhyang.pet.infrastructure.persistence.FacultEntityRepository;
+import com.inkhyang.pet.infrastructure.persistence.classroom.entity.FacultEntity;
+import com.inkhyang.pet.infrastructure.persistence.classroom.mapper.FacultEntityMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

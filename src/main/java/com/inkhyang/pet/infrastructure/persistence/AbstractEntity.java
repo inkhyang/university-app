@@ -1,4 +1,4 @@
-package com.inkhyang.pet.infrastructure.persistance;
+package com.inkhyang.pet.infrastructure.persistence;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;

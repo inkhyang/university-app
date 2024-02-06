@@ -1,6 +1,6 @@
-package com.inkhyang.pet.infrastructure.persistance;
+package com.inkhyang.pet.infrastructure.persistence;
 
-import com.inkhyang.pet.infrastructure.persistance.classroom.entity.GroupEntity;
+import com.inkhyang.pet.infrastructure.persistence.classroom.entity.GroupEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.*;

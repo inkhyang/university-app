@@ -1,7 +1,7 @@
-package com.inkhyang.pet.infrastructure.persistance.classroom.entity;
+package com.inkhyang.pet.infrastructure.persistence.classroom.entity;
 
-import com.inkhyang.pet.infrastructure.persistance.AbstractEntity;
-import com.inkhyang.pet.infrastructure.persistance.student.entity.StudentEntity;
+import com.inkhyang.pet.infrastructure.persistence.AbstractEntity;
+import com.inkhyang.pet.infrastructure.persistence.student.entity.StudentEntity;
 import jakarta.persistence.*;
 
 import java.util.List;

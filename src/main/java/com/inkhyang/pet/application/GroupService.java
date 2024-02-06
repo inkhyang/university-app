@@ -1,9 +1,9 @@
 package com.inkhyang.pet.application;
 
 import com.inkhyang.pet.domain.classroom.Group;
-import com.inkhyang.pet.infrastructure.persistance.GroupEntityRepository;
-import com.inkhyang.pet.infrastructure.persistance.classroom.entity.GroupEntity;
-import com.inkhyang.pet.infrastructure.persistance.classroom.mapper.GroupEntityMapper;
+import com.inkhyang.pet.infrastructure.persistence.GroupEntityRepository;
+import com.inkhyang.pet.infrastructure.persistence.classroom.entity.GroupEntity;
+import com.inkhyang.pet.infrastructure.persistence.classroom.mapper.GroupEntityMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
