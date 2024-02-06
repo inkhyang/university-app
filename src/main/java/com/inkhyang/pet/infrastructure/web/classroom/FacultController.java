@@ -1,7 +1,7 @@
 package com.inkhyang.pet.infrastructure.web.classroom;
 
 
-import com.inkhyang.pet.application.FacultService;
+import com.inkhyang.pet.application.impl.FacultServiceImpl;
 import com.inkhyang.pet.infrastructure.web.mapper.FacultDtoMapper;
 import com.inkhyang.pet.domain.classroom.Facult;
 import com.inkhyang.pet.infrastructure.web.classroom.dto.FacultDto;
@@ -13,10 +13,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/facults")
 public class FacultController {
-    private final FacultService service;
+    private final FacultServiceImpl service;
     private final FacultDtoMapper facultMapper;
 
-    public FacultController(FacultService service, FacultDtoMapper facultMapper) {
+    public FacultController(FacultServiceImpl service, FacultDtoMapper facultMapper) {
         this.service = service;
         this.facultMapper = facultMapper;
     }

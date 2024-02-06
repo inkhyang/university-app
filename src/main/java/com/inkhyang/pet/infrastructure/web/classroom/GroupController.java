@@ -1,6 +1,6 @@
 package com.inkhyang.pet.infrastructure.web.classroom;
 
-import com.inkhyang.pet.application.GroupService;
+import com.inkhyang.pet.application.impl.GroupServiceImpl;
 import com.inkhyang.pet.infrastructure.web.mapper.GroupDtoMapper;
 import com.inkhyang.pet.domain.classroom.Group;
 import com.inkhyang.pet.infrastructure.web.classroom.dto.GroupDto;
@@ -12,10 +12,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/groups")
 public class GroupController {
-    private final GroupService service;
+    private final GroupServiceImpl service;
     private final GroupDtoMapper groupMapper;
 
-    public GroupController(GroupService service, GroupDtoMapper groupMapper) {
+    public GroupController(GroupServiceImpl service, GroupDtoMapper groupMapper) {
         this.service = service;
         this.groupMapper = groupMapper;
     }
