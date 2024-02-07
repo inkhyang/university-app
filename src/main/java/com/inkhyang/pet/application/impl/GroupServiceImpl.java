@@ -2,9 +2,7 @@ package com.inkhyang.pet.application.impl;
 
 import com.inkhyang.pet.application.GroupService;
 import com.inkhyang.pet.domain.classroom.Group;
-import com.inkhyang.pet.infrastructure.persistence.GroupEntityRepository;
-import com.inkhyang.pet.infrastructure.persistence.classroom.entity.GroupEntity;
-import com.inkhyang.pet.infrastructure.persistence.classroom.mapper.GroupEntityMapper;
+import com.inkhyang.pet.domain.repository.impl.GroupRepositoryImpl;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,32 +10,25 @@ import java.util.Optional;
 
 @Service
 public class GroupServiceImpl implements GroupService {
-    private final GroupEntityRepository groupEntityRepository;
-    private final GroupEntityMapper groupMapper;
+    private final GroupRepositoryImpl groupRepository;
 
-    public GroupServiceImpl(GroupEntityRepository groupEntityRepository, GroupEntityMapper groupMapper) {
-        this.groupEntityRepository = groupEntityRepository;
-        this.groupMapper = groupMapper;
+    public GroupServiceImpl(GroupRepositoryImpl groupRepository) {
+        this.groupRepository = groupRepository;
     }
 
-    public Optional<Group> getByName(String name) {
-        return groupEntityRepository.findByName(name)
-                .map(groupMapper::toDomain);
+    public Optional<Group> getById(Group.GroupId id) {
+        return groupRepository.findById(id);
     }
 
     public List<Group> getAll() {
-        return groupEntityRepository.findAll().stream()
-                .map(groupMapper::toDomain)
-                .toList();
+        return groupRepository.findAll();
     }
 
     public Group create(Group group) {
-        GroupEntity groupEntity = groupEntityRepository.save(groupMapper.toEntity(group));
-        return groupMapper.toDomain(groupEntity);
+        return groupRepository.save(group);
     }
 
     public void remove(Group.GroupId id) {
-        groupEntityRepository.findByName(id.name())
-                .ifPresent(groupEntityRepository::delete);
+        groupRepository.remove(id);
     }
 }

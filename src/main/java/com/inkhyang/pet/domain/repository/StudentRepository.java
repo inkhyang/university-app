@@ -5,9 +5,10 @@ import com.inkhyang.pet.domain.student.Score;
 import com.inkhyang.pet.domain.student.Student;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface StudentRepository {
-    Student findById(Student.StudentId id);
+    Optional<Student> findById(Student.StudentId id);
     List<Student> findAll();
     Student save(Student student);
     void delete(Student.StudentId id);
