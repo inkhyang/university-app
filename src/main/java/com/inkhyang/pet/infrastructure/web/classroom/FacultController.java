@@ -35,7 +35,7 @@ public class FacultController {
 
     @GetMapping("/{id}")
     public ResponseEntity<FacultDto> one(@PathVariable String name) {
-        return ResponseEntity.of(service.getByName(name)
+        return ResponseEntity.of(service.getById(new Facult.FacultId(name))
                 .map(facultMapper::toDto));
     }
 

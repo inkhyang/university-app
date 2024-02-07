@@ -36,7 +36,7 @@ public class GroupController {
 
     @GetMapping("/{id}")
     public ResponseEntity<GroupDto> one(@PathVariable String name) {
-        return ResponseEntity.of(service.getByName(name)
+        return ResponseEntity.of(service.getById(new Group.GroupId(name))
                 .map(groupMapper::toDto));
     }
 
