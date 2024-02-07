@@ -1,7 +1,7 @@
 package com.inkhyang.pet.domain.repository.impl;
 
-import com.inkhyang.pet.domain.classroom.Group;
 import com.inkhyang.pet.domain.repository.GroupRepository;
+import com.inkhyang.pet.domain.classroom.Group;
 import com.inkhyang.pet.infrastructure.persistence.GroupEntityRepository;
 import com.inkhyang.pet.infrastructure.persistence.classroom.entity.GroupEntity;
 import com.inkhyang.pet.infrastructure.persistence.classroom.mapper.GroupEntityMapper;

@@ -2,7 +2,7 @@ package com.inkhyang.pet.infrastructure.web.student;
 
 import com.inkhyang.pet.infrastructure.web.mapper.StudentDtoMapper;
 import com.inkhyang.pet.domain.student.Student;
-import com.inkhyang.pet.infrastructure.exception.StudentNotFoundException;
+import com.inkhyang.pet.application.exception.StudentNotFoundException;
 import com.inkhyang.pet.application.impl.StudentServiceImpl;
 import com.inkhyang.pet.infrastructure.web.student.dto.MarkDto;
 import com.inkhyang.pet.infrastructure.web.student.dto.StudentDto;

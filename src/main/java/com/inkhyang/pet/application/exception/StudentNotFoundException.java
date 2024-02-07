@@ -1,4 +1,4 @@
-package com.inkhyang.pet.infrastructure.exception;
+package com.inkhyang.pet.application.exception;
 
 public class StudentNotFoundException extends RuntimeException {
     public StudentNotFoundException(String email) {
