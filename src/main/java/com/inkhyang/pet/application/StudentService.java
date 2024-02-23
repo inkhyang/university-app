@@ -11,4 +11,5 @@ public interface StudentService {
     Student create(Student student);
     void remove(Student.StudentId id);
     void update(Student.StudentId id, String discipline, Integer score);
+    double averageMarkById(Student.StudentId id);
 }

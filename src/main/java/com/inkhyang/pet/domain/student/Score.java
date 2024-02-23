@@ -9,6 +9,10 @@ public enum Score {
         this.value = value;
     }
 
+    public int getValue() {
+        return value;
+    }
+
     public static Score valueOf(Integer score){
         return Arrays.stream(Score.values())
                 .filter(it -> it.value == score)
