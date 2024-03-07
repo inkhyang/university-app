@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 public class StudentServiceImpl implements StudentService {
@@ -41,11 +40,11 @@ public class StudentServiceImpl implements StudentService {
         studentRepository.update(id, Discipline.valueOf(discipline), Score.valueOf(score));
     }
 
-    public double averageMarkById(Student.StudentId id){
+    public double averageMarkById(Student.StudentId id) {
         return studentRepository.findById(id).stream()
                 .flatMap(s -> s.getMarks().stream())
                 .map(mark -> mark.getScore().getValue())
-                .mapToDouble(d->d)
+                .mapToDouble(d -> d)
                 .average()
                 .orElse(0.0);
     }
