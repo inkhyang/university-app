@@ -1,0 +1,13 @@
+spring:
+  flyway:
+    enable: true
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: validate
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/university?currentSchema=public
+    password: postgres
+    username: postgres
