@@ -1,8 +1,8 @@
 package com.inkhyang.pet.domain.repository;
 
-import com.inkhyang.pet.domain.student.Discipline;
-import com.inkhyang.pet.domain.student.Score;
-import com.inkhyang.pet.domain.student.Student;
+import com.inkhyang.pet.domain.Discipline;
+import com.inkhyang.pet.domain.Score;
+import com.inkhyang.pet.domain.Student;
 
 import java.util.List;
 import java.util.Optional;

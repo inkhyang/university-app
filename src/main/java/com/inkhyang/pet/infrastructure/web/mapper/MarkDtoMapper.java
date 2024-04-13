@@ -1,7 +1,7 @@
 package com.inkhyang.pet.infrastructure.web.mapper;
 
-import com.inkhyang.pet.domain.student.Mark;
-import com.inkhyang.pet.infrastructure.web.student.dto.MarkDto;
+import com.inkhyang.pet.domain.Mark;
+import com.inkhyang.pet.infrastructure.web.dto.MarkDto;
 import org.mapstruct.Mapper;
 
 @Mapper

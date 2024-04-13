@@ -1,7 +1,7 @@
 package com.inkhyang.pet.application.impl;
 
 import com.inkhyang.pet.application.FacultService;
-import com.inkhyang.pet.domain.classroom.Facult;
+import com.inkhyang.pet.domain.Facult;
 import com.inkhyang.pet.domain.repository.impl.FacultRepositoryImpl;
 import org.springframework.stereotype.Service;
 

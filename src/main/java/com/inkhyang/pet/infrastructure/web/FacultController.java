@@ -1,10 +1,10 @@
-package com.inkhyang.pet.infrastructure.web.classroom;
+package com.inkhyang.pet.infrastructure.web;
 
 
 import com.inkhyang.pet.application.impl.FacultServiceImpl;
 import com.inkhyang.pet.infrastructure.web.mapper.FacultDtoMapper;
-import com.inkhyang.pet.domain.classroom.Facult;
-import com.inkhyang.pet.infrastructure.web.classroom.dto.FacultDto;
+import com.inkhyang.pet.domain.Facult;
+import com.inkhyang.pet.infrastructure.web.dto.FacultDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

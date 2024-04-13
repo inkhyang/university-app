@@ -1,14 +1,19 @@
-package com.inkhyang.pet.infrastructure.persistence.classroom.entity;
+package com.inkhyang.pet.infrastructure.persistence.entity;
 
-import com.inkhyang.pet.infrastructure.persistence.AbstractEntity;
-import com.inkhyang.pet.infrastructure.persistence.student.entity.StudentEntity;
 import jakarta.persistence.*;
+import org.hibernate.annotations.UuidGenerator;
 
 import java.util.List;
+import java.util.UUID;
 
 @Entity
 @Table(name = "groups")
-public class GroupEntity extends AbstractEntity {
+public class GroupEntity {
+
+    @Id
+    @GeneratedValue
+    @UuidGenerator(style = UuidGenerator.Style.TIME)
+    private UUID id;
     @Column(nullable = false)
     private String name;
 
@@ -17,6 +22,14 @@ public class GroupEntity extends AbstractEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
     private FacultEntity facult;
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

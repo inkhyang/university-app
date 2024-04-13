@@ -1,7 +1,7 @@
 package com.inkhyang.pet.application.impl;
 
 import com.inkhyang.pet.application.GroupService;
-import com.inkhyang.pet.domain.classroom.Group;
+import com.inkhyang.pet.domain.Group;
 import com.inkhyang.pet.domain.repository.impl.GroupRepositoryImpl;
 import org.springframework.stereotype.Service;
 

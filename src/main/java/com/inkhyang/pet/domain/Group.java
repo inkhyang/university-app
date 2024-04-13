@@ -1,6 +1,4 @@
-package com.inkhyang.pet.domain.classroom;
-
-import com.inkhyang.pet.domain.student.Student;
+package com.inkhyang.pet.domain;
 
 import java.util.List;
 

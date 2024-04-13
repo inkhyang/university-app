@@ -1,6 +1,6 @@
 package com.inkhyang.pet.domain.repository;
 
-import com.inkhyang.pet.domain.classroom.Group;
+import com.inkhyang.pet.domain.Group;
 
 import java.util.List;
 import java.util.Optional;

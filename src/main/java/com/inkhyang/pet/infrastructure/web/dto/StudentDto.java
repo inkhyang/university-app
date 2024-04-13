@@ -1,4 +1,4 @@
-package com.inkhyang.pet.infrastructure.web.student.dto;
+package com.inkhyang.pet.infrastructure.web.dto;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package com.inkhyang.pet.infrastructure.web.mapper;
 
-import com.inkhyang.pet.domain.classroom.Group;
-import com.inkhyang.pet.infrastructure.web.classroom.dto.GroupDto;
+import com.inkhyang.pet.domain.Group;
+import com.inkhyang.pet.infrastructure.web.dto.GroupDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;

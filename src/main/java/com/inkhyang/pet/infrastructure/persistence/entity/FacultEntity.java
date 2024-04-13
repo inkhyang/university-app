@@ -1,19 +1,33 @@
-package com.inkhyang.pet.infrastructure.persistence.classroom.entity;
+package com.inkhyang.pet.infrastructure.persistence.entity;
 
 
-import com.inkhyang.pet.infrastructure.persistence.AbstractEntity;
 import jakarta.persistence.*;
+import org.hibernate.annotations.UuidGenerator;
 
 import java.util.List;
+import java.util.UUID;
 
 @Entity
 @Table(name = "facults")
-public class FacultEntity extends AbstractEntity {
+public class FacultEntity {
+    @Id
+    @GeneratedValue
+    @UuidGenerator(style = UuidGenerator.Style.TIME)
+    private UUID id;
+
     @Column(nullable = false)
     private String name;
 
     @OneToMany(mappedBy = "facult", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<GroupEntity> groups;
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

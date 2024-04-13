@@ -1,14 +1,16 @@
 package com.inkhyang.pet.domain.repository.impl;
 
 import com.inkhyang.pet.domain.repository.FacultRepository;
-import com.inkhyang.pet.domain.classroom.Facult;
+import com.inkhyang.pet.domain.Facult;
 import com.inkhyang.pet.infrastructure.persistence.FacultEntityRepository;
-import com.inkhyang.pet.infrastructure.persistence.classroom.entity.FacultEntity;
-import com.inkhyang.pet.infrastructure.persistence.classroom.mapper.FacultEntityMapper;
+import com.inkhyang.pet.infrastructure.persistence.entity.FacultEntity;
+import com.inkhyang.pet.infrastructure.persistence.mapper.FacultEntityMapper;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
+@Repository
 public class FacultRepositoryImpl implements FacultRepository {
     private final FacultEntityRepository facultEntityRepository;
     private final FacultEntityMapper facultMapper;

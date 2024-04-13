@@ -1,11 +1,11 @@
-package com.inkhyang.pet.infrastructure.web.student;
+package com.inkhyang.pet.infrastructure.web;
 
 import com.inkhyang.pet.infrastructure.web.mapper.StudentDtoMapper;
-import com.inkhyang.pet.domain.student.Student;
+import com.inkhyang.pet.domain.Student;
 import com.inkhyang.pet.application.exception.StudentNotFoundException;
 import com.inkhyang.pet.application.impl.StudentServiceImpl;
-import com.inkhyang.pet.infrastructure.web.student.dto.MarkDto;
-import com.inkhyang.pet.infrastructure.web.student.dto.StudentDto;
+import com.inkhyang.pet.infrastructure.web.dto.MarkDto;
+import com.inkhyang.pet.infrastructure.web.dto.StudentDto;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

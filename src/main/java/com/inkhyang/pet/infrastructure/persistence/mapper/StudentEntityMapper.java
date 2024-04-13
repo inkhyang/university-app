@@ -1,8 +1,8 @@
-package com.inkhyang.pet.infrastructure.persistence.student.mapper;
+package com.inkhyang.pet.infrastructure.persistence.mapper;
 
 
-import com.inkhyang.pet.domain.student.Student;
-import com.inkhyang.pet.infrastructure.persistence.student.entity.StudentEntity;
+import com.inkhyang.pet.domain.Student;
+import com.inkhyang.pet.infrastructure.persistence.entity.StudentEntity;
 import org.mapstruct.*;
 
 @Mapper(uses = {MarkEntityMapper.class})

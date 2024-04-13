@@ -1,6 +1,6 @@
 package com.inkhyang.pet.application;
 
-import com.inkhyang.pet.domain.classroom.Facult;
+import com.inkhyang.pet.domain.Facult;
 
 import java.util.List;
 import java.util.Optional;

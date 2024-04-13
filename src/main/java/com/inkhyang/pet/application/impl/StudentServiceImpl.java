@@ -3,9 +3,9 @@ package com.inkhyang.pet.application.impl;
 
 import com.inkhyang.pet.application.StudentService;
 import com.inkhyang.pet.domain.repository.impl.StudentRepositoryImpl;
-import com.inkhyang.pet.domain.student.Discipline;
-import com.inkhyang.pet.domain.student.Score;
-import com.inkhyang.pet.domain.student.Student;
+import com.inkhyang.pet.domain.Discipline;
+import com.inkhyang.pet.domain.Score;
+import com.inkhyang.pet.domain.Student;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
