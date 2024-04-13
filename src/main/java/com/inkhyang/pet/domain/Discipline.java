@@ -1,4 +1,4 @@
-package com.inkhyang.pet.domain.student;
+package com.inkhyang.pet.domain;
 
 public enum Discipline {
     MATH("Math"), PHYS("Phys"), PE("PE"), LANGUAGE("Language");

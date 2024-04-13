@@ -1,17 +1,19 @@
 package com.inkhyang.pet.domain.repository.impl;
 
 import com.inkhyang.pet.domain.repository.StudentRepository;
-import com.inkhyang.pet.domain.student.Discipline;
-import com.inkhyang.pet.domain.student.Mark;
-import com.inkhyang.pet.domain.student.Score;
-import com.inkhyang.pet.domain.student.Student;
+import com.inkhyang.pet.domain.Discipline;
+import com.inkhyang.pet.domain.Mark;
+import com.inkhyang.pet.domain.Score;
+import com.inkhyang.pet.domain.Student;
 import com.inkhyang.pet.infrastructure.persistence.StudentEntityRepository;
-import com.inkhyang.pet.infrastructure.persistence.student.entity.StudentEntity;
-import com.inkhyang.pet.infrastructure.persistence.student.mapper.MarkEntityMapper;
-import com.inkhyang.pet.infrastructure.persistence.student.mapper.StudentEntityMapper;
+import com.inkhyang.pet.infrastructure.persistence.entity.StudentEntity;
+import com.inkhyang.pet.infrastructure.persistence.mapper.MarkEntityMapper;
+import com.inkhyang.pet.infrastructure.persistence.mapper.StudentEntityMapper;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+@Repository
 public class StudentRepositoryImpl implements StudentRepository {
     private final StudentEntityRepository studentEntityRepository;
     private final StudentEntityMapper studentMapper;

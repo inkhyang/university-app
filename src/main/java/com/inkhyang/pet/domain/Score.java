@@ -1,4 +1,4 @@
-package com.inkhyang.pet.domain.student;
+package com.inkhyang.pet.domain;
 
 import java.util.Arrays;
 

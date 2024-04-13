@@ -1,14 +1,19 @@
-package com.inkhyang.pet.infrastructure.persistence.student.entity;
+package com.inkhyang.pet.infrastructure.persistence.entity;
 
-import com.inkhyang.pet.infrastructure.persistence.AbstractEntity;
 import jakarta.persistence.*;
+import org.hibernate.annotations.UuidGenerator;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 @Entity
 @Table(name = "marks")
-public class MarkEntity extends AbstractEntity {
+public class MarkEntity {
 
+    @Id
+    @GeneratedValue
+    @UuidGenerator(style = UuidGenerator.Style.TIME)
+    private UUID id;
 
     @Column(nullable = false)
     private LocalDate date;
@@ -21,6 +26,14 @@ public class MarkEntity extends AbstractEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
     private StudentEntity student;
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
 
     public LocalDate getDate() {
         return date;

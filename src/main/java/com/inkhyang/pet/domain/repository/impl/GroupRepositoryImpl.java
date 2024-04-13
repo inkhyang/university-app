@@ -1,14 +1,16 @@
 package com.inkhyang.pet.domain.repository.impl;
 
 import com.inkhyang.pet.domain.repository.GroupRepository;
-import com.inkhyang.pet.domain.classroom.Group;
+import com.inkhyang.pet.domain.Group;
 import com.inkhyang.pet.infrastructure.persistence.GroupEntityRepository;
-import com.inkhyang.pet.infrastructure.persistence.classroom.entity.GroupEntity;
-import com.inkhyang.pet.infrastructure.persistence.classroom.mapper.GroupEntityMapper;
+import com.inkhyang.pet.infrastructure.persistence.entity.GroupEntity;
+import com.inkhyang.pet.infrastructure.persistence.mapper.GroupEntityMapper;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
+@Repository
 public class GroupRepositoryImpl implements GroupRepository {
     private final GroupEntityRepository groupEntityRepository;
     private final GroupEntityMapper groupMapper;
